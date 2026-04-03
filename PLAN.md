@@ -8,14 +8,20 @@
 
 ## How to Use This Plan
 
-1. Pick the next incomplete step (first `[ ]` checkbox).
+1. Scan the Summary Table at the bottom — find the first step where **Status** is `NOT STARTED` or `IN PROGRESS`.
 2. Read the linked docs listed in that step's **Context** block.
-3. Complete the deliverables. Mark the step `[x]` when done.
-4. Do NOT skip steps — later steps depend on earlier ones.
+3. When you begin a step, change its `**Status**` line to `IN PROGRESS`.
+4. Complete every deliverable checkbox in that step.
+5. When all checkboxes are ticked, change `**Status**` to `COMPLETE`.
+6. Do NOT skip steps — later steps depend on earlier ones.
+
+**Status values**: `NOT STARTED` · `IN PROGRESS` · `COMPLETE` · `BLOCKED` (add a note if blocked)
 
 ---
 
 ## STEP 0 — Xcode Project Skeleton
+
+**Status**: `NOT STARTED`
 
 **Goal**: Create the iOS project with the correct folder structure, minimum deployment target, and SPM dependencies added.
 
@@ -42,6 +48,8 @@
 
 ## STEP 1 — Design System Tokens
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement all design system tokens (`HHColors`, `HHTypography`, `HHSpacing`) so every subsequent view can reference them without hardcoding values.
 
 **Context**: `docs/DESIGN_SYSTEM.md` (Color System, Typography, Spacing & Layout sections)
@@ -58,6 +66,8 @@
 
 ## STEP 2 — Analytics Helper
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement the `Analytics` wrapper and the `App` entry point with all three SDKs initialised.
 
 **Context**: `docs/ONBOARDING_ANALYTICS.md` (PostHog Setup, Analytics Helper — Swift section), `docs/MONETIZATION.md` (RevenueCat SDK Setup)
@@ -72,6 +82,8 @@
 ---
 
 ## STEP 3 — Supabase Schema & Migrations
+
+**Status**: `NOT STARTED`
 
 **Goal**: Set up the Supabase project schema, RLS policies, and storage bucket entirely in SQL migration files committed to the repo.
 
@@ -92,6 +104,8 @@
 ---
 
 ## STEP 4 — Domain Entities (TDD)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Define all domain entities as pure Swift structs/enums. Zero third-party imports.
 
@@ -115,6 +129,8 @@ Implementation:
 
 ## STEP 5 — Domain Repository Protocols
 
+**Status**: `NOT STARTED`
+
 **Goal**: Define all repository protocols (interfaces) and use case protocols. Zero implementation — protocols only.
 
 **Context**: `docs/MASTER_PLAN.md` (Domain/Repositories), `docs/DATA_ARCHITECTURE.md` (iOS Data Flow, Audio Flow), `docs/METHODOLOGY.md` (Architecture Rules)
@@ -130,6 +146,8 @@ Implementation:
 ---
 
 ## STEP 6 — Domain Use Cases (TDD)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Implement all domain use cases with tests first.
 
@@ -155,6 +173,8 @@ Use cases (test file then implementation file for each):
 
 ## STEP 7 — Data Layer: DTOs & Supabase Client
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement Codable DTOs that map Supabase JSON responses to domain entities, plus the Supabase client wrapper.
 
 **Context**: `docs/DATA_ARCHITECTURE.md` (Core Schema, iOS Data Flow), `docs/METHODOLOGY.md` (Data layer rules)
@@ -174,6 +194,8 @@ Implementation:
 ---
 
 ## STEP 8 — Data Layer: Repository Implementations (TDD)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Implement the three Supabase-backed repositories.
 
@@ -197,6 +219,8 @@ Implementation:
 
 ## STEP 9 — Data Layer: Auth & Entitlements (TDD)
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement auth (Supabase Apple Sign In + magic link) and RevenueCat entitlement repository.
 
 **Context**: `docs/MONETIZATION.md` (iOS Implementation — RevenueCat SDK, Entitlement Repository), `docs/ONBOARDING_ANALYTICS.md` (Identifying Users)
@@ -215,6 +239,8 @@ Implementation:
 ---
 
 ## STEP 10 — Map ViewModel & MapView (TDD ViewModel)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Build the core map screen — the primary app screen users see after onboarding.
 
@@ -236,6 +262,8 @@ Implementation:
 
 ## STEP 11 — SiteDetail ViewModel & View (TDD ViewModel)
 
+**Status**: `NOT STARTED`
+
 **Goal**: The full-screen site detail view — text, image, audio trigger, save/unsave.
 
 **Context**: `docs/DESIGN_SYSTEM.md` (Place Card — Expanded section), `docs/ONBOARDING_ANALYTICS.md` (Core Discovery Events), `docs/MONETIZATION.md` (Feature Gating Pattern)
@@ -253,6 +281,8 @@ Implementation:
 ---
 
 ## STEP 12 — AudioPlayer ViewModel & View (TDD ViewModel)
+
+**Status**: `NOT STARTED`
 
 **Goal**: The persistent audio player bar with collapsed and expanded states.
 
@@ -272,6 +302,8 @@ Implementation:
 
 ## STEP 13 — Shared UI Components
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement all reusable components referenced across views.
 
 **Context**: `docs/DESIGN_SYSTEM.md` (Place Card Compact, Category Chips, Bottom Navigation, Buttons, Text Input)
@@ -289,6 +321,8 @@ Implementation:
 
 ## STEP 14 — Onboarding Flow: Screens 1–4
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement the first half of onboarding (Splash, Value Prop carousel, Location permission, Notification permission).
 
 **Context**: `docs/ONBOARDING_ANALYTICS.md` (Screens 1–4, analytics events), `docs/DESIGN_SYSTEM.md` (Buttons, Typography)
@@ -305,6 +339,8 @@ Implementation:
 
 ## STEP 15 — Onboarding Flow: Screens 5–7 (Auth, Interests, Paywall)
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement auth screen, interest selection, and soft paywall.
 
 **Context**: `docs/ONBOARDING_ANALYTICS.md` (Screens 5–7), `docs/MONETIZATION.md` (PaywallView, Paywall Trigger Points), `docs/DESIGN_SYSTEM.md` (Buttons)
@@ -320,6 +356,8 @@ Implementation:
 ---
 
 ## STEP 16 — Saved & Profile Screens (TDD ViewModels)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Implement the Saved and Profile tabs.
 
@@ -342,6 +380,8 @@ Implementation:
 
 ## STEP 17 — Supabase Edge Function: `generate-audio`
 
+**Status**: `NOT STARTED`
+
 **Goal**: Implement the TypeScript/Deno Edge Function that generates both free (Polly) and premium (ElevenLabs) audio narrations and uploads to Storage.
 
 **Context**: `docs/DATA_ARCHITECTURE.md` (Edge Function: generate-audio, Storage Structure, Narration Script Guidelines)
@@ -355,6 +395,8 @@ Implementation:
 ---
 
 ## STEP 18 — Supabase Edge Function: `enrich-site`
+
+**Status**: `NOT STARTED`
 
 **Goal**: Edge Function that fetches Wikipedia content for a newly inserted site and triggers audio generation.
 
@@ -370,6 +412,8 @@ Implementation:
 
 ## STEP 19 — Supabase Edge Function: `sync-osm`
 
+**Status**: `NOT STARTED`
+
 **Goal**: Nightly cron function that imports London + NYC `historic=*` sites from OSM Overpass API.
 
 **Context**: `docs/DATA_ARCHITECTURE.md` (OSM Overpass API section, Deduplication, Nightly Sync Cron)
@@ -384,6 +428,8 @@ Implementation:
 
 ## STEP 20 — Data Seeding Script
 
+**Status**: `NOT STARTED`
+
 **Goal**: A one-shot script that seeds ~500 verified historical sites for London + NYC using Wikidata SPARQL + Wikipedia enrichment, to have real data from day 1.
 
 **Context**: `docs/DATA_ARCHITECTURE.md` (Wikidata SPARQL section, Wikipedia REST API, Data Quality — Verification Levels)
@@ -396,6 +442,8 @@ Implementation:
 ---
 
 ## STEP 21 — RevenueCat Webhooks Edge Function
+
+**Status**: `NOT STARTED`
 
 **Goal**: Handle RevenueCat server-to-server webhooks to keep `user_history` subscription state in sync.
 
@@ -410,6 +458,8 @@ Implementation:
 
 ## STEP 22 — Push Notifications
 
+**Status**: `NOT STARTED`
+
 **Goal**: Register for push notifications and handle "nearby site" notification tap.
 
 **Context**: `docs/ONBOARDING_ANALYTICS.md` (Screen 4 — Notification Permission, notification events), `docs/MASTER_PLAN.md` (Phase 4 — Push notifications)
@@ -423,6 +473,8 @@ Implementation:
 ---
 
 ## STEP 23 — Offline Audio Download (Premium)
+
+**Status**: `NOT STARTED`
 
 **Goal**: Allow premium users to download audio narrations for offline playback.
 
@@ -439,6 +491,8 @@ Implementation:
 
 ## STEP 24 — GitHub Actions CI
 
+**Status**: `NOT STARTED`
+
 **Goal**: Set up automated CI that runs on every push to `main` and `develop` and all PRs.
 
 **Context**: `docs/METHODOLOGY.md` (CI / GitHub Actions section)
@@ -451,6 +505,8 @@ Implementation:
 ---
 
 ## STEP 25 — Accessibility & Dark Mode Polish
+
+**Status**: `NOT STARTED`
 
 **Goal**: Ensure all views meet the accessibility and dark mode requirements from the design system.
 
@@ -470,6 +526,8 @@ Implementation:
 
 ## STEP 26 — App Store Connect & TestFlight Prep
 
+**Status**: `NOT STARTED`
+
 **Goal**: Configure everything needed to submit to TestFlight for beta testing.
 
 **Context**: `docs/MASTER_PLAN.md` (Phase 4 — App Store Connect), `docs/MONETIZATION.md` (Products)
@@ -487,32 +545,34 @@ Implementation:
 
 ## Summary Table
 
-| Step | Name | Layer | TDD Required |
-|------|------|-------|-------------|
-| 0 | Xcode Project Skeleton | Foundation | — |
-| 1 | Design System Tokens | Core | — |
-| 2 | Analytics Helper + App Entry | Core | — |
-| 3 | Supabase Schema & Migrations | Backend | — |
-| 4 | Domain Entities | Domain | Yes |
-| 5 | Domain Repository Protocols | Domain | — |
-| 6 | Domain Use Cases | Domain | Yes |
-| 7 | Data Layer: DTOs & Supabase Client | Data | Yes |
-| 8 | Data Layer: Repository Implementations | Data | Yes |
-| 9 | Data Layer: Auth & Entitlements | Data | Yes |
-| 10 | Map ViewModel & MapView | Presentation | Yes (VM) |
-| 11 | SiteDetail ViewModel & View | Presentation | Yes (VM) |
-| 12 | AudioPlayer ViewModel & View | Presentation | Yes (VM) |
-| 13 | Shared UI Components | Presentation | — |
-| 14 | Onboarding Screens 1–4 | Presentation | — |
-| 15 | Onboarding Screens 5–7 (Auth, Interests, Paywall) | Presentation | — |
-| 16 | Saved & Profile Screens | Presentation | Yes (VM) |
-| 17 | Edge Function: generate-audio | Backend | Yes (Deno) |
-| 18 | Edge Function: enrich-site | Backend | Yes (Deno) |
-| 19 | Edge Function: sync-osm | Backend | Yes (Deno) |
-| 20 | Data Seeding Script | Backend | — |
-| 21 | RevenueCat Webhooks | Backend | Yes (Deno) |
-| 22 | Push Notifications | iOS | — |
-| 23 | Offline Audio Download | iOS + Data | Yes |
-| 24 | GitHub Actions CI | DevOps | — |
-| 25 | Accessibility & Dark Mode | iOS | — |
-| 26 | App Store & TestFlight Prep | Release | — |
+> Agents: scan this table first. Find the first `NOT STARTED` or `IN PROGRESS` row and go to that step.
+
+| Step | Name | Layer | TDD Required | Status |
+|------|------|-------|-------------|--------|
+| 0 | Xcode Project Skeleton | Foundation | — | `NOT STARTED` |
+| 1 | Design System Tokens | Core | — | `NOT STARTED` |
+| 2 | Analytics Helper + App Entry | Core | — | `NOT STARTED` |
+| 3 | Supabase Schema & Migrations | Backend | — | `NOT STARTED` |
+| 4 | Domain Entities | Domain | Yes | `NOT STARTED` |
+| 5 | Domain Repository Protocols | Domain | — | `NOT STARTED` |
+| 6 | Domain Use Cases | Domain | Yes | `NOT STARTED` |
+| 7 | Data Layer: DTOs & Supabase Client | Data | Yes | `NOT STARTED` |
+| 8 | Data Layer: Repository Implementations | Data | Yes | `NOT STARTED` |
+| 9 | Data Layer: Auth & Entitlements | Data | Yes | `NOT STARTED` |
+| 10 | Map ViewModel & MapView | Presentation | Yes (VM) | `NOT STARTED` |
+| 11 | SiteDetail ViewModel & View | Presentation | Yes (VM) | `NOT STARTED` |
+| 12 | AudioPlayer ViewModel & View | Presentation | Yes (VM) | `NOT STARTED` |
+| 13 | Shared UI Components | Presentation | — | `NOT STARTED` |
+| 14 | Onboarding Screens 1–4 | Presentation | — | `NOT STARTED` |
+| 15 | Onboarding Screens 5–7 (Auth, Interests, Paywall) | Presentation | — | `NOT STARTED` |
+| 16 | Saved & Profile Screens | Presentation | Yes (VM) | `NOT STARTED` |
+| 17 | Edge Function: generate-audio | Backend | Yes (Deno) | `NOT STARTED` |
+| 18 | Edge Function: enrich-site | Backend | Yes (Deno) | `NOT STARTED` |
+| 19 | Edge Function: sync-osm | Backend | Yes (Deno) | `NOT STARTED` |
+| 20 | Data Seeding Script | Backend | — | `NOT STARTED` |
+| 21 | RevenueCat Webhooks | Backend | Yes (Deno) | `NOT STARTED` |
+| 22 | Push Notifications | iOS | — | `NOT STARTED` |
+| 23 | Offline Audio Download | iOS + Data | Yes | `NOT STARTED` |
+| 24 | GitHub Actions CI | DevOps | — | `NOT STARTED` |
+| 25 | Accessibility & Dark Mode | iOS | — | `NOT STARTED` |
+| 26 | App Store & TestFlight Prep | Release | — | `NOT STARTED` |
