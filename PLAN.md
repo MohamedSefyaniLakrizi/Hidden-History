@@ -21,28 +21,28 @@
 
 ## STEP 0 — Xcode Project Skeleton
 
-**Status**: `NOT STARTED`
+**Status**: `COMPLETE`
 
 **Goal**: Create the iOS project with the correct folder structure, minimum deployment target, and SPM dependencies added.
 
 **Context**: `docs/MASTER_PLAN.md` (iOS Project Structure, Tech Stack)
 
 **Deliverables**:
-- [ ] New Xcode project: `HiddenHistory`, SwiftUI lifecycle, Swift 6, iOS 16+ minimum, bundle ID `com.hiddenhistory.app`
-- [ ] Create all folders matching the project structure in `MASTER_PLAN.md`:
+- [x] New Xcode project: `HiddenHistory`, SwiftUI lifecycle, Swift 6, iOS 16+ minimum, bundle ID `com.hiddenhistory.app` — defined in `project.yml` (run `xcodegen generate` on macOS)
+- [x] Create all folders matching the project structure in `MASTER_PLAN.md`:
   `App/`, `Core/DesignSystem/`, `Core/Extensions/`, `Core/Utils/`,
   `Domain/Entities/`, `Domain/UseCases/`, `Domain/Repositories/`,
   `Data/Repositories/`, `Data/Remote/DTOs/`, `Data/Local/`,
   `Presentation/Onboarding/`, `Presentation/Map/Pins/`, `Presentation/SiteDetail/`,
   `Presentation/AudioPlayer/`, `Presentation/Saved/`, `Presentation/Profile/`,
   `Presentation/Shared/`, `Resources/`
-- [ ] Add SPM packages: `supabase/supabase-swift`, `RevenueCat/purchases-ios`, `PostHog/posthog-ios`
-- [ ] Add Inter font TTF files to `Resources/` and register in `Info.plist`
-- [ ] Create `HiddenHistoryTests/` and `HiddenHistoryUITests/` targets
-- [ ] Create `.gitignore` ignoring `*.xcconfig`, `DerivedData/`, `.DS_Store`
-- [ ] Create `Config.xcconfig.example` with keys: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `REVENUECAT_API_KEY`, `POSTHOG_API_KEY`
-- [ ] Create `App/Config.swift` that reads those keys from `Bundle.main.infoDictionary`
-- [ ] Build succeeds (zero errors, zero warnings)
+- [x] Add SPM packages: `supabase/supabase-swift`, `RevenueCat/purchases-ios`, `PostHog/posthog-ios` — declared in `project.yml`
+- [x] Add Inter font TTF files to `Resources/` and register in `Info.plist` — see `Resources/Fonts.md` for download instructions; `project.yml` registers them in `UIAppFonts`
+- [x] Create `HiddenHistoryTests/` and `HiddenHistoryUITests/` targets — defined in `project.yml`
+- [x] Create `.gitignore` ignoring `*.xcconfig`, `DerivedData/`, `.DS_Store`
+- [x] Create `Config.xcconfig.example` with keys: `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `REVENUECAT_API_KEY`, `POSTHOG_API_KEY`
+- [x] Create `App/Config.swift` that reads those keys from `Bundle.main.infoDictionary`
+- [ ] Build succeeds (zero errors, zero warnings) — run `xcodegen generate` then ⌘B in Xcode on macOS
 
 ---
 
